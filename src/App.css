@@ -1,38 +1,79 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px 200px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  background-color:#222430;
+  height: 100vh;
+}
+.App>div>div{
+  max-height: 90vh;
+  box-sizing: border-box;
+  overflow-x: auto;
+  border: none;
+}
+
+
+.mapcomponent {
+  width:500px ;
+  display: grid;
+  grid-template-columns: 50px 200px 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: #ebeef3;
+}
+.mapcomponent > *{
+  margin: auto;
+}
+
+.box:not(:last-of-type){
+  margin-bottom: 10px;
+}
+
+.tododiv >div>div>div{
+  background-color: rgb(18, 233, 161);
+  padding: 5px;
+}
+.completeddiv >div>div>div{
+  background-color: rgb(255, 127, 163);
+  padding: 5px;
+
+}
+
+.buttondiv{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.buttondiv >button:first-of-type{
+  background-color: rgb(16, 224, 103);
+  border: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.buttondiv >button:last-child{
+  background-color: rgb(165, 17, 1);
+  border: none;
+  color: white;
+}
+.buttondiv >button{
+  padding: 5px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+#status{
+  background-color:#ff7fa3;
+}
+.head{
+  color: white;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+.boxdiv::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+.boxdiv::-webkit-scrollbar-thumb {
+	background-color: #373232;
 }
